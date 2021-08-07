@@ -71,18 +71,25 @@ class Bassist(Musician):
 
 
 class Band(Musician):
-    def __init__(self, name, members):
-
-        self.name = name
-        self.members = members
-        Band.instances.append(self.name)
-
+    instances=[]
+    def __init__(self, name,members):
+        self.name=name
+        self.members=members
+        Band.instances.append(self)
+             
     def play_solos(self):
-        solos = []
-        for member in self.members:
-            solos.append(member.play_solo())
-        return solos
+        each_member=[]
+        for x in self.members:
+            each_member.append(x.play_solo())
+        return each_member
+    def __str__(self):
+        
+        return f" i am {self.name} and welcome to you "
 
+    def __repr__(self):
+
+        return f"Name = {self.name}"
     @classmethod
-    def to_list(self):
-        return self.instances
+    def to_list(class_method):
+        
+        return class_method.instances

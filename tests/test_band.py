@@ -1,8 +1,8 @@
-import json
+# import json
 import pytest
-import yaml
+# import yaml
 
-from pythonic_garage_band.band import Band, Musician, Guitarist, Bassist, Drummer
+from pythonic_garage_ban.band import Band, Musician, Guitarist, Bassist, Drummer
 
 
 def test_guitarist_str():
